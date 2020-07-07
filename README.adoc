@@ -1,0 +1,11 @@
+Sources:
+
+- https://developer.android.com/guide/topics/connectivity/nfc/nfc
+- https://github.com/pro100svitlo/Credit-Card-NFC-Reader
+- https://github.com/devnied/EMV-NFC-Paycard-Enrollment
+- https://github.com/devnied/EMV-NFC-Paycard-Enrollment/commit/8bf0a16ed0d0ed1df5d2569269b6458a4e526df6
+
+Sample implementations of EMV readers:
+- https://github.com/sasc999/javaemvreader
+- https://github.com/devnied/EMV-NFC-Paycard-Enrollment
+- https://github.com/pro100svitlo/Credit-Card-NFC-Reader
