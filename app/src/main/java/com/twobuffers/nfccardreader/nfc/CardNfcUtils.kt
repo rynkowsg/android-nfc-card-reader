@@ -1,4 +1,4 @@
-package com.twobuffers.nfccardreader
+package com.twobuffers.nfccardreader.nfc
 
 import android.app.Activity
 import android.app.PendingIntent
@@ -23,8 +23,8 @@ class CardNfcUtils(private val mActivity: Activity) {
         mNfcAdapter?.enableForegroundDispatch(
             mActivity,
             mPendingIntent,
-            null,
-            null
+            INTENT_FILTER,
+            TECH_LIST
         )
         Timber.d("dispatch ENABLED")
     }
@@ -41,8 +41,6 @@ class CardNfcUtils(private val mActivity: Activity) {
         )
         private val TECH_LIST =
             arrayOf(arrayOf(IsoDep::class.java.name))
-
-
     }
 }
 

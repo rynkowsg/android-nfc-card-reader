@@ -33,6 +33,7 @@ dependencies {
 
     implementation Libs.AndroidX.coreKtx
     implementation Libs.AndroidX.appcompat
+    implementation Libs.AndroidX.recyclerview
     implementation Libs.AndroidX.constraintlayoutStable
     implementation Libs.AndroidX.Lifecycle.runtimeKtx
 
@@ -41,4 +42,6 @@ dependencies {
     implementation Libs.timber
 
     implementation Libs.threeTenAbp
+
+    testImplementation Libs.junit
 }

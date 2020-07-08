@@ -1,4 +1,4 @@
-package com.twobuffers.nfccardreader
+package com.twobuffers.nfccardreader.nfc
 
 import android.content.Intent
 import android.nfc.NfcAdapter
@@ -34,7 +34,8 @@ class Processor(
             preFn()
             Timber.d("(@try)")
             val cardDetails = withContext(localScope.coroutineContext) { internalExecute(intent) }
-            successFn(cardDetails)
+            if (cardDetails == null) failureFn("received null")
+            else successFn(cardDetails)
         } catch (t: Throwable) {
             Timber.d("(@catch) t=$t")
             failureFn("caught exception: ${t.localizedMessage}")

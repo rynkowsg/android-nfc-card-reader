@@ -1,4 +1,4 @@
-package com.twobuffers.nfccardreader
+package com.twobuffers.nfccardreader.nfc
 
 import android.annotation.SuppressLint
 import android.nfc.tech.IsoDep
@@ -10,41 +10,17 @@ import fr.devnied.bitlib.BytesUtils
 import timber.log.Timber
 import java.io.IOException
 
-/**
- * Provider used to communicate with EMV card
- *
- * @author Millau Julien
- */
 class Provider : IProvider {
-
-    /**
-     * CardChanel
-     */
-//    private val channel: CardChannel? = null
-
-    /**
-     * Method used to get the field log
-     *
-     * @return the log
-     */
-    /**
-     * Logger
-     */
     val log = StringBuffer()
-
-    /**
-     * Tag comm
-     */
     private var mTagCom: IsoDep? = null
 
     @SuppressLint("BinaryOperationInTimber")
     @Throws(CommunicationException::class)
-    override fun transceive(pCommand: ByteArray): ByteArray {
+    override fun transceive(pCommand: ByteArray): ByteArray? {
         log.append("============================================================\n")
         log.append("send: " + BytesUtils.bytesToString(pCommand))
             .append("\n")
-        var response: ByteArray? = null
-        response = try {
+        val response: ByteArray? = try {
             // send command to emv card
             mTagCom!!.transceive(pCommand)
         } catch (e: IOException) {
@@ -59,7 +35,7 @@ class Provider : IProvider {
             log.append(TlvUtil.prettyPrintAPDUResponse(response)).append("\n")
         } catch (e: Exception) {
         }
-        Timber.d("[log] ${log.toString()}")
+        Timber.d(log.toString())
         return response
     }
 
