@@ -1,11 +1,23 @@
-Sources:
+=== About
 
-- https://developer.android.com/guide/topics/connectivity/nfc/nfc
-- https://github.com/pro100svitlo/Credit-Card-NFC-Reader
-- https://github.com/devnied/EMV-NFC-Paycard-Enrollment
-- https://github.com/devnied/EMV-NFC-Paycard-Enrollment/commit/8bf0a16ed0d0ed1df5d2569269b6458a4e526df6
+This is a simple app scanning basic card details and showing them in a list.
 
-Sample implementations of EMV readers:
+The project uses link:https://github.com/devnied/EMV-NFC-Paycard-Enrollment/app[EMV-NFC-Paycard-Enrollment] project for processing EMV data.
+
+=== Links
+
+==== EMV projects
+
 - https://github.com/sasc999/javaemvreader
 - https://github.com/devnied/EMV-NFC-Paycard-Enrollment
+- https://github.com/devnied/EMV-NFC-Paycard-Enrollment/commit/8bf0a16ed0d0ed1df5d2569269b6458a4e526df6
 - https://github.com/pro100svitlo/Credit-Card-NFC-Reader
+
+==== Sample apps
+
+- https://play.google.com/store/apps/details?id=com.github.devnied.emvnfccard.pro
+- https://play.google.com/store/apps/details?id=com.pro100svitlo.nfccardread
+
+==== Other
+
+- https://developer.android.com/guide/topics/connectivity/nfc/advanced-nfc
